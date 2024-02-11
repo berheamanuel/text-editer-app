@@ -27,6 +27,8 @@ module.exports = () => {
         title: "JATE",
       }),
 
+      new MiniCssExtractPlugin(),
+
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
@@ -44,6 +46,10 @@ module.exports = () => {
             destination: path.join("assets", "icons"),
           },
         ],
+      }),
+      new InjectManifest({
+        swSrc: "./src/sw.js",
+        swDest: "service-worker.js",
       }),
     ],
 
