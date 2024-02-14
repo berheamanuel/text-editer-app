@@ -1,7 +1,8 @@
 import { openDB } from "idb";
 
-const initdb = async () =>
-  openDB("jate", 1, {
+const initdb = async () => {
+  try {
+    const db = openDB("jate", 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains("jate")) {
         console.log("jate database already exists");
@@ -10,7 +11,13 @@ const initdb = async () =>
       db.createObjectStore("jate", { keyPath: "id", autoIncrement: true });
       console.log("jate database created");
     },
+  
   });
+} catch (error) {
+  console.error("Failed to initialize database", error);
+    throw error;
+}
+};
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
@@ -26,7 +33,7 @@ export const putDb = async (content) => {
   const store = tx.objectStore("jate");
 
   // Add the content to the database
-  const request = store.put({ id: id, value: content });
+  const request = store.add({ id: id, value: content });
 
   // Get confirmation of the request.
   const result = await request;
