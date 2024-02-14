@@ -15,8 +15,7 @@ const initdb = async () => {
   });
 } catch (error) {
   console.error("Failed to initialize database", error);
-    throw error;
-}
+    }
 };
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
@@ -70,7 +69,7 @@ export const getDb = async () => {
 
   console.error("getDb not  implemented");
   
-  return result?.value;
+  return result.value;
   
 };
 
