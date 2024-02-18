@@ -43,80 +43,53 @@ THEN I should have proper build scripts for a webpack application
 ```
 
 ## Installation
+This application is deployed to Heroku
 
-* Open the app and start writing 
+* [Text Editor](https://text-editer-app-2b70a3090996.herokuapp.com/)
 
-## Grading Requirements
+To run the application locally 
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+* Clone this repository 
+* Run npm i to install dependencies
+* Start the application with npm run start
 
-This Challenge is graded based on the following criteria:
+## Demonstration
 
-### Technical Acceptance Criteria: 40%
+* Application functionality
 
-* Satisfies all of the above acceptance criteria plus the following:
+![alt text](./Assets/Images/Screenshot%202024-02-17%20184732.png)
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
+![alt text](./Assets/Images/Screenshot%202024-02-17%20185118.png)
 
-  * The application works without an internet connection
+* The following image shows the application's manifest.json file
 
-  * Automatically saves content inside the text editor when the DOM window is unfocused
+![manifest](./Assets/Images/Manifest.png)
 
-  * Bundled with webpack
+* The following image shows the application's registered service worker
 
-  * Create a service worker with workbox that Caches static assets
+![Service worker](./Assets/Images/Service%20workers.png)
 
-  * The application should use babel in order to use async / await
+* The following image shows the application's IndexedDB storage
 
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
+![IndexedDB](./Assets/Images/IndexedDB.png)
 
-  * Can be installed as a Progressive Web Application
+## Technologies Used
 
-### Deployment: 32%
+* NodeJS
+* JavaScript
+* ExpressJS
+* Git Bash
+* VS Code
+* Concurrently
+* Webpack
+* css loader
+* Babel Loader
 
-* Application deployed to Render at live URL with build scripts
+## Reference
 
-* Application loads with no errors
+* PWA class activity and mini project
 
-* Application GitHub URL submitted
+## License 
+* MIT license 
 
-* GitHub repo contains application code
 
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
